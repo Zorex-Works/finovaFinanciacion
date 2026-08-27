@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finova | Solicitud de financiación</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    F
+                </span>
+
+                Finova
+
+            </a>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
+
+                <a
+                    href="solicitud.html"
+                    class="active"
+                >
+                    Solicitud
+                </a>
+
+                <a href="requisitos.html">
+                    Requisitos
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <a
+                href="solicitud.html"
+                class="btn btn-primary"
+            >
+                Solicitar financiación
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- ENCABEZADO DE LA PÁGINA -->
+
+        <section class="application-header">
+
+            <div class="container">
+
+
+                <div class="application-heading">
+
+                    <div>
+
+                        <span class="tag">
+                            Solicitud de financiación
+                        </span>
+
+                        <h1>
+                            Cuéntanos qué necesitas
+                        </h1>
+
+                        <p>
+                            Completa la información solicitada para
+                            iniciar tu proceso de financiación.
+                        </p>
+
+                    </div>
+
+
+                    <div class="application-status">
+
+                        <span class="status-dot"></span>
+
+                        Proceso en línea
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FORMULARIO
+        ================================================== -->
+
+        <section class="application">
+
+            <div class="container application-layout">
+
+
+                <!-- =========================================
+                     FORMULARIO PRINCIPAL
+                ========================================== -->
+
+                <form
+                    class="application-form"
+                    id="applicationForm"
+                >
+
+
+                    <!-- ==============================
+                         SECCIÓN 01
+                    =============================== -->
+
+                    <div class="form-section">
+
+
+                        <div class="form-section-title">
+
+
+                            <span class="form-number">
+                                01
+                            </span>
+
+
+                            <div>
+
+                                <h2>
+                                    Datos personales
+                                </h2>
+
+                                <p>
+                                    Información básica del solicitante.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <div class="input-group">
+
+                                <label for="name">
+                                    Nombre completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Ej. Juan Pérez"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="document">
+                                    Documento de identidad
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="document"
+                                    name="document"
+                                    placeholder="Número de documento"
+                                    autocomplete="off"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="correo@ejemplo.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="phone">
+                                    Número de teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+57 300 000 0000"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==============================
+                         SECCIÓN 02
+                    =============================== -->
+
+                    <div class="form-section">
+
+
+                        <div class="form-section-title">
+
+                            <span class="form-number">
+                                02
+                            </span>
+
+
+                            <div>
+
+                                <h2>
+                                    Información de financiación
+                                </h2>
+
+                                <p>
+                                    Indica las características
+                                    de la financiación que necesitas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <div class="input-group">
+
+                                <label for="type">
+                                    Tipo de financiación
+                                </label>
+
+                                <select
+                                    id="type"
+                                    name="type"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="personal">
+                                        Préstamo personal
+                                    </option>
+
+                                    <option value="project">
+                                        Financiación de proyecto
+                                    </option>
+
+                                    <option value="business">
+                                        Financiación empresarial
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="amount">
+                                    Monto solicitado
+                                </label>
+
+                                <div class="input-money">
+
+                                    <span>
+                                        $
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="amount"
+                                        name="amount"
+                                        placeholder="0"
+                                        min="0"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="term">
+                                    Plazo deseado
+                                </label>
+
+                                <select
+                                    id="term"
+                                    name="term"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona el plazo
+                                    </option>
+
+                                    <option value="6">
+                                        6 meses
+                                    </option>
+
+                                    <option value="12">
+                                        12 meses
+                                    </option>
+
+                                    <option value="24">
+                                        24 meses
+                                    </option>
+
+                                    <option value="36">
+                                        36 meses
+                                    </option>
+
+                                    <option value="48">
+                                        48 meses
+                                    </option>
+
+                                    <option value="60">
+                                        60 meses
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="input-group">
+
+                                <label for="destination">
+                                    Destino de la financiación
+                                </label>
+
+                                <select
+                                    id="destination"
+                                    name="destination"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="personal">
+                                        Gastos personales
+                                    </option>
+
+                                    <option value="home">
+                                        Vivienda
+                                    </option>
+
+                                    <option value="education">
+                                        Educación
+                                    </option>
+
+                                    <option value="business">
+                                        Negocio
+                                    </option>
+
+                                    <option value="other">
+                                        Otro
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==============================
+                         SECCIÓN 03
+                    =============================== -->
+
+                    <div class="form-section">
+
+
+                        <div class="form-section-title">
+
+                            <span class="form-number">
+                                03
+                            </span>
+
+
+                            <div>
+
+                                <h2>
+                                    Información adicional
+                                </h2>
+
+                                <p>
+                                    Cuéntanos brevemente el motivo
+                                    de tu solicitud.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="input-group">
+
+                            <label for="message">
+                                ¿Para qué necesitas la financiación?
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Describe brevemente el propósito de la financiación..."
+                            ></textarea>
+
+                            <span class="input-help">
+                                Esta información nos ayudará a
+                                comprender mejor tu solicitud.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ==============================
+                         CONFIRMACIÓN
+                    =============================== -->
+
+                    <div class="form-confirmation">
+
+
+                        <label class="checkbox">
+
+                            <input
+                                type="checkbox"
+                                required
+                            >
+
+                            <span>
+
+                                Declaro que la información
+                                proporcionada es correcta y acepto
+                                el tratamiento de mis datos
+                                personales.
+
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- ==============================
+                         BOTÓN
+                    =============================== -->
+
+                    <div class="form-submit">
+
+
+                        <div>
+
+                            <strong>
+                                ¿Todo listo?
+                            </strong>
+
+                            <span>
+                                Revisa tus datos antes de enviar.
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary submit-button"
+                        >
+
+                            Enviar solicitud
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- MENSAJE -->
+
+                    <p
+                        id="formMessage"
+                        class="form-message"
+                    ></p>
+
+
+                </form>
+
+
+
+                <!-- =========================================
+                     PANEL LATERAL
+                ========================================== -->
+
+                <aside class="application-sidebar">
+
+
+                    <div class="sidebar-card">
+
+
+                        <div class="sidebar-icon">
+                            ✓
+                        </div>
+
+
+                        <h3>
+                            Proceso sencillo
+                        </h3>
+
+
+                        <p>
+                            Completa el formulario en una sola
+                            pantalla. No necesitas crear una cuenta
+                            para comenzar.
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="sidebar-card">
+
+
+                        <div class="sidebar-icon">
+                            ?
+                        </div>
+
+
+                        <h3>
+                            ¿Necesitas ayuda?
+                        </h3>
+
+
+                        <p>
+                            Si tienes alguna duda sobre el proceso,
+                            nuestro equipo está disponible para
+                            ayudarte.
+                        </p>
+
+
+                        <a
+                            href="contacto.html"
+                            class="sidebar-link"
+                        >
+                            Contactar con nosotros
+                            <span>→</span>
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="sidebar-security">
+
+
+                        <span class="security-icon">
+                            🔒
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Información protegida
+                            </strong>
+
+                            <p>
+                                Tus datos deben ser tratados de
+                                acuerdo con nuestra política de
+                                privacidad.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+
+            <div class="logo footer-logo">
+
+                <span class="logo-icon">
+                    F
+                </span>
+
+                Finova
+
+            </div>
+
+
+            <p>
+                © 2026 Finova. Todos los derechos reservados.
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
