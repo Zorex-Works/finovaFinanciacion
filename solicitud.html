@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- =====================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,6 +15,11 @@
     >
 
     <title>Finova | Solicitud de financiación</title>
+
+
+    <!-- =====================================================
+         HOJA DE ESTILOS PRINCIPAL
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -24,7 +33,7 @@
 
 
     <!-- =====================================================
-         HEADER
+         HEADER / NAVEGACIÓN PRINCIPAL
     ====================================================== -->
 
     <header class="header">
@@ -32,7 +41,9 @@
         <div class="container nav">
 
 
-            <!-- LOGO -->
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
 
             <a
                 href="index.html"
@@ -48,7 +59,9 @@
             </a>
 
 
-            <!-- MENU -->
+            <!-- =================================================
+                 MENÚ DE NAVEGACIÓN
+            ================================================== -->
 
             <nav class="menu">
 
@@ -60,6 +73,7 @@
                     Nosotros
                 </a>
 
+                <!-- Página actual -->
                 <a
                     href="solicitud.html"
                     class="active"
@@ -78,6 +92,10 @@
             </nav>
 
 
+            <!-- =================================================
+                 BOTÓN PRINCIPAL
+            ================================================== -->
+
             <a
                 href="solicitud.html"
                 class="btn btn-primary"
@@ -92,20 +110,26 @@
 
 
     <!-- =====================================================
-         MAIN
+         CONTENIDO PRINCIPAL
     ====================================================== -->
 
     <main>
 
 
-        <!-- ENCABEZADO DE LA PÁGINA -->
+        <!-- =================================================
+             ENCABEZADO DE LA SOLICITUD
+        ================================================== -->
 
         <section class="application-header">
 
             <div class="container">
 
-
                 <div class="application-heading">
+
+
+                    <!-- =================================================
+                         TÍTULO Y DESCRIPCIÓN
+                    ================================================== -->
 
                     <div>
 
@@ -125,6 +149,10 @@
                     </div>
 
 
+                    <!-- =================================================
+                         ESTADO DEL PROCESO
+                    ================================================== -->
+
                     <div class="application-status">
 
                         <span class="status-dot"></span>
@@ -141,18 +169,18 @@
 
 
 
-        <!-- =================================================
-             FORMULARIO
-        ================================================== -->
+        <!-- =====================================================
+             SECCIÓN PRINCIPAL DE LA SOLICITUD
+        ====================================================== -->
 
         <section class="application">
 
             <div class="container application-layout">
 
 
-                <!-- =========================================
+                <!-- =================================================
                      FORMULARIO PRINCIPAL
-                ========================================== -->
+                ================================================== -->
 
                 <form
                     class="application-form"
@@ -160,20 +188,36 @@
                 >
 
 
-                    <!-- ==============================
-                         SECCIÓN 01
-                    =============================== -->
+                    <!-- =================================================
+                         MENSAJE DEL FORMULARIO
+                         
+                         Este elemento es utilizado por app.js
+                         para mostrar mensajes de error o éxito.
+                    ================================================== -->
+
+                    <div
+                        id="formMessage"
+                        class="form-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+
+
+                    <!-- =================================================
+                         SECCIÓN 01 - DATOS PERSONALES
+                    ================================================== -->
 
                     <div class="form-section">
 
 
-                        <div class="form-section-title">
+                        <!-- TÍTULO DE LA SECCIÓN -->
 
+                        <div class="form-section-title">
 
                             <span class="form-number">
                                 01
                             </span>
-
 
                             <div>
 
@@ -191,8 +235,12 @@
 
 
 
+                        <!-- CAMPOS DE DATOS PERSONALES -->
+
                         <div class="form-grid">
 
+
+                            <!-- NOMBRE -->
 
                             <div class="input-group">
 
@@ -213,6 +261,8 @@
 
 
 
+                            <!-- DOCUMENTO -->
+
                             <div class="input-group">
 
                                 <label for="document">
@@ -232,6 +282,8 @@
 
 
 
+                            <!-- CORREO ELECTRÓNICO -->
+
                             <div class="input-group">
 
                                 <label for="email">
@@ -250,6 +302,8 @@
                             </div>
 
 
+
+                            <!-- TELÉFONO -->
 
                             <div class="input-group">
 
@@ -275,19 +329,20 @@
 
 
 
-                    <!-- ==============================
-                         SECCIÓN 02
-                    =============================== -->
+                    <!-- =================================================
+                         SECCIÓN 02 - INFORMACIÓN DE FINANCIACIÓN
+                    ================================================== -->
 
                     <div class="form-section">
 
+
+                        <!-- TÍTULO DE LA SECCIÓN -->
 
                         <div class="form-section-title">
 
                             <span class="form-number">
                                 02
                             </span>
-
 
                             <div>
 
@@ -306,8 +361,12 @@
 
 
 
+                        <!-- CAMPOS DE FINANCIACIÓN -->
+
                         <div class="form-grid">
 
+
+                            <!-- TIPO DE FINANCIACIÓN -->
 
                             <div class="input-group">
 
@@ -343,6 +402,8 @@
 
 
 
+                            <!-- MONTO SOLICITADO -->
+
                             <div class="input-group">
 
                                 <label for="amount">
@@ -369,6 +430,8 @@
                             </div>
 
 
+
+                            <!-- PLAZO -->
 
                             <div class="input-group">
 
@@ -415,6 +478,8 @@
                             </div>
 
 
+
+                            <!-- DESTINO DE LA FINANCIACIÓN -->
 
                             <div class="input-group">
 
@@ -463,19 +528,20 @@
 
 
 
-                    <!-- ==============================
-                         SECCIÓN 03
-                    =============================== -->
+                    <!-- =================================================
+                         SECCIÓN 03 - INFORMACIÓN ADICIONAL
+                    ================================================== -->
 
                     <div class="form-section">
 
+
+                        <!-- TÍTULO DE LA SECCIÓN -->
 
                         <div class="form-section-title">
 
                             <span class="form-number">
                                 03
                             </span>
-
 
                             <div>
 
@@ -493,6 +559,8 @@
                         </div>
 
 
+
+                        <!-- DESCRIPCIÓN DE LA SOLICITUD -->
 
                         <div class="input-group">
 
@@ -514,17 +582,15 @@
 
                         </div>
 
-
                     </div>
 
 
 
-                    <!-- ==============================
-                         CONFIRMACIÓN
-                    =============================== -->
+                    <!-- =================================================
+                         CONFIRMACIÓN Y TRATAMIENTO DE DATOS
+                    ================================================== -->
 
                     <div class="form-confirmation">
-
 
                         <label class="checkbox">
 
@@ -534,27 +600,26 @@
                             >
 
                             <span>
-
                                 Declaro que la información
                                 proporcionada es correcta y acepto
                                 el tratamiento de mis datos
                                 personales.
-
                             </span>
 
                         </label>
-
 
                     </div>
 
 
 
-                    <!-- ==============================
-                         BOTÓN
-                    =============================== -->
+                    <!-- =================================================
+                         BOTÓN DE ENVÍO
+                    ================================================== -->
 
                     <div class="form-submit">
 
+
+                        <!-- TEXTO DE CONFIRMACIÓN -->
 
                         <div>
 
@@ -569,6 +634,8 @@
                         </div>
 
 
+                        <!-- BOTÓN -->
+
                         <button
                             type="submit"
                             class="btn btn-primary submit-button"
@@ -576,46 +643,33 @@
 
                             Enviar solicitud
 
-                            <span class="button-arrow">
-                                →
-                            </span>
+                            <span class="button-arrow"></span>
 
                         </button>
 
                     </div>
 
 
-                    <!-- MENSAJE -->
-
-                    <p
-                        id="formMessage"
-                        class="form-message"
-                    ></p>
-
-
                 </form>
 
 
 
-                <!-- =========================================
+                <!-- =================================================
                      PANEL LATERAL
-                ========================================== -->
+                ================================================== -->
 
                 <aside class="application-sidebar">
 
 
+                    <!-- =================================================
+                         TARJETA - PROCESO
+                    ================================================== -->
+
                     <div class="sidebar-card">
-
-
-                        <div class="sidebar-icon">
-                            ✓
-                        </div>
-
 
                         <h3>
                             Proceso sencillo
                         </h3>
-
 
                         <p>
                             Completa el formulario en una sola
@@ -623,23 +677,19 @@
                             para comenzar.
                         </p>
 
-
                     </div>
 
 
 
+                    <!-- =================================================
+                         TARJETA - AYUDA
+                    ================================================== -->
+
                     <div class="sidebar-card">
-
-
-                        <div class="sidebar-icon">
-                            ?
-                        </div>
-
 
                         <h3>
                             ¿Necesitas ayuda?
                         </h3>
-
 
                         <p>
                             Si tienes alguna duda sobre el proceso,
@@ -647,33 +697,35 @@
                             ayudarte.
                         </p>
 
-
                         <a
                             href="contacto.html"
                             class="sidebar-link"
                         >
                             Contactar con nosotros
-                            <span>→</span>
-                        </a>
 
+                            <span>
+                                →
+                            </span>
+
+                        </a>
 
                     </div>
 
 
 
-                    <div class="sidebar-security">
+                    <!-- =================================================
+                         TARJETA - SEGURIDAD
+                    ================================================== -->
 
+                    <div class="sidebar-card">
 
-                        <span class="security-icon">
-                            🔒
-                        </span>
-
+                        <br>
 
                         <div>
 
-                            <strong>
+                            <h3>
                                 Información protegida
-                            </strong>
+                            </h3>
 
                             <p>
                                 Tus datos deben ser tratados de
@@ -682,7 +734,6 @@
                             </p>
 
                         </div>
-
 
                     </div>
 
@@ -707,6 +758,8 @@
         <div class="container footer-content">
 
 
+            <!-- LOGO DEL FOOTER -->
+
             <div class="logo footer-logo">
 
                 <span class="logo-icon">
@@ -718,6 +771,8 @@
             </div>
 
 
+            <!-- COPYRIGHT -->
+
             <p>
                 © 2026 Finova. Todos los derechos reservados.
             </p>
@@ -728,6 +783,13 @@
     </footer>
 
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+         
+         Se carga al final del documento para que el HTML
+         esté disponible antes de ejecutar app.js.
+    ====================================================== -->
 
     <script src="js/app.js"></script>
 

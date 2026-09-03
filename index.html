@@ -2,29 +2,76 @@
 <html lang="es">
 
 <head>
+
+    <!-- =====================================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+    ====================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Finova | Inicio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>Finova | Financiación sencilla</title>
+
+
+    <!-- =====================================================
+         HOJA DE ESTILOS PRINCIPAL
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =====================================================
+         HEADER / NAVEGACIÓN PRINCIPAL
+    ====================================================== -->
+
     <header class="header">
 
         <div class="container nav">
 
-            <a href="index.html" class="logo">
-                <span class="logo-icon">F</span>
+
+            <!-- =================================================
+                 LOGOTIPO
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    F
+                </span>
+
                 Finova
+
             </a>
+
+
+
+            <!-- =================================================
+                 MENÚ PRINCIPAL DE NAVEGACIÓN
+            ================================================== -->
 
             <nav class="menu">
 
-                <a href="index.html">
+                <!-- PÁGINA ACTUAL -->
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
                     Inicio
                 </a>
 
@@ -46,7 +93,16 @@
 
             </nav>
 
-            <a href="solicitud.html" class="btn btn-primary">
+
+
+            <!-- =================================================
+                 BOTÓN PRINCIPAL DEL HEADER
+            ================================================== -->
+
+            <a
+                href="solicitud.html"
+                class="btn btn-primary"
+            >
                 Solicitar financiación
             </a>
 
@@ -55,99 +111,113 @@
     </header>
 
 
-    <!-- CONTENIDO -->
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
     <main>
+
+
+        <!-- =================================================
+             HERO / PRESENTACIÓN PRINCIPAL
+        ================================================== -->
 
         <section class="hero">
 
-            <div class="container hero-content">
 
-                <div class="hero-text">
+            <!-- =================================================
+                 CONTENIDO DE TEXTO DEL HERO
+            ================================================== -->
 
-                    <span class="tag">
-                        Financiación sencilla
-                    </span>
+            <div class="hero-content">
 
-                    <h1>
-                        Encuentra la financiación
-                        <span>que necesitas.</span>
-                    </h1>
+                <!-- ETIQUETA SUPERIOR -->
 
-                    <p>
-                        Una forma sencilla y clara de conocer
-                        tus opciones de financiación y comenzar
-                        tu solicitud.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a
-                            href="solicitud.html"
-                            class="btn btn-primary"
-                        >
-                            Solicitar financiación
-                        </a>
-
-                        <a
-                            href="nosotros.html"
-                            class="btn btn-secondary"
-                        >
-                            Conocer Finova
-                        </a>
-
-                    </div>
-
-                </div>
+                <span class="hero-badge">
+                    Financiación sencilla
+                </span>
 
 
-                <div class="hero-card">
+                <!-- TÍTULO PRINCIPAL -->
 
-                    <div class="hero-card-icon">
-                        $
-                    </div>
+                <h1>
+                    Encuentra la
+                    <span>financiación</span>
+                    que necesitas.
+                </h1>
 
-                    <h2>
-                        ¿Necesitas financiación?
-                    </h2>
 
-                    <p>
-                        Completa nuestra solicitud y conoce
-                        las opciones disponibles para ti.
-                    </p>
+                <!-- DESCRIPCIÓN -->
+
+                <p>
+                    Conoce tus opciones de financiación de una manera
+                    sencilla, clara y transparente.
+                </p>
+
+
+                <!-- =================================================
+                     BOTONES PRINCIPALES DEL HERO
+                ================================================== -->
+
+                <div class="hero-buttons">
 
                     <a
                         href="solicitud.html"
-                        class="btn btn-primary btn-full"
+                        class="btn-primary"
                     >
-                        Comenzar solicitud
+                        Solicitar financiación
+                    </a>
+
+                    <a
+                        href="nosotros.html"
+                        class="btn-secondary"
+                    >
+                        Conocer Finova
                     </a>
 
                 </div>
 
             </div>
 
-        </section>
 
 
-        <section class="intro">
+            <!-- =================================================
+                 IMAGEN PRINCIPAL DEL HERO
+            ================================================== -->
 
-            <div class="container">
+            <div class="hero-image">
 
-                <div class="section-title">
+                <img
+                    src="img/financiacion.jpg"
+                    alt="Personas revisando opciones de financiación"
+                >
 
-                    <span class="tag">
-                        Finova
-                    </span>
 
-                    <h2>
-                        Una experiencia sencilla
-                    </h2>
+                <!-- TARJETA SUPERPUESTA SOBRE LA IMAGEN -->
 
-                    <p>
-                        Hemos diseñado nuestro proceso para que
-                        puedas encontrar la información que necesitas
-                        de forma rápida y clara.
-                    </p>
+                <div class="hero-image-card">
+
+                    <!-- ICONO -->
+
+                    <div class="card-icon">
+                        ✓
+                    </div>
+
+
+                    <!-- INFORMACIÓN DE LA TARJETA -->
+
+                    <div>
+
+                        <strong>
+                            Tu proyecto comienza aquí
+                        </strong>
+
+                        <span>
+                            Información clara y sencilla
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -155,13 +225,547 @@
 
         </section>
 
+
+
+        <!-- =================================================
+             SERVICIOS / OPCIONES DE FINANCIACIÓN
+        ================================================== -->
+
+        <section class="services">
+
+            <div class="container">
+
+
+                <!-- =================================================
+                     ENCABEZADO DE LA SECCIÓN
+                ================================================== -->
+
+                <div class="section-title">
+
+                    <span class="tag">
+                        Nuestras opciones
+                    </span>
+
+                    <h2>
+                        Financiación pensada para tus necesidades
+                    </h2>
+
+                    <p>
+                        Conoce algunas de las alternativas que
+                        puedes encontrar a través de Finova.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GRID DE SERVICIOS
+                ================================================== -->
+
+                <div class="services-grid">
+
+
+                    <!-- =================================================
+                         SERVICIO 01
+                         FINANCIACIÓN PERSONAL
+                    ================================================== -->
+
+                    <article class="service-card">
+
+
+                        <!-- IMAGEN -->
+
+                        <div class="service-image">
+
+                            <img
+                                src="img/financiacion-personal.jpg"
+                                alt="Financiación personal"
+                            >
+
+                        </div>
+
+
+                        <!-- CONTENIDO -->
+
+                        <div class="service-content">
+
+                            <span class="service-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Financiación personal
+                            </h3>
+
+                            <p>
+                                Una alternativa para organizar
+                                tus proyectos y necesidades
+                                personales.
+                            </p>
+
+                            <a href="solicitud.html">
+                                Conocer opciones →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         SERVICIO 02
+                         PROYECTOS
+                    ================================================== -->
+
+                    <article class="service-card">
+
+
+                        <!-- IMAGEN -->
+
+                        <div class="service-image">
+
+                            <img
+                                src="img/proyecto.jpg"
+                                alt="Financiación para proyectos"
+                            >
+
+                        </div>
+
+
+                        <!-- CONTENIDO -->
+
+                        <div class="service-content">
+
+                            <span class="service-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Proyectos
+                            </h3>
+
+                            <p>
+                                Apoyo financiero para proyectos
+                                que quieras iniciar, desarrollar
+                                o hacer crecer.
+                            </p>
+
+                            <a href="solicitud.html">
+                                Conocer opciones →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         SERVICIO 03
+                         NEGOCIOS
+                    ================================================== -->
+
+                    <article class="service-card">
+
+
+                        <!-- IMAGEN -->
+
+                        <div class="service-image">
+
+                            <img
+                                src="img/negocio.jpg"
+                                alt="Financiación para negocios"
+                            >
+
+                        </div>
+
+
+                        <!-- CONTENIDO -->
+
+                        <div class="service-content">
+
+                            <span class="service-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Negocios
+                            </h3>
+
+                            <p>
+                                Opciones para apoyar el crecimiento,
+                                inversión o fortalecimiento de
+                                tu negocio.
+                            </p>
+
+                            <a href="solicitud.html">
+                                Conocer opciones →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROCESO / ¿CÓMO FUNCIONA?
+        ================================================== -->
+
+        <section class="process">
+
+            <div class="container">
+
+
+                <!-- =================================================
+                     ENCABEZADO DE LA SECCIÓN
+                ================================================== -->
+
+                <div class="section-title">
+
+                    <span class="tag">
+                        Proceso sencillo
+                    </span>
+
+                    <h2>
+                        ¿Cómo funciona?
+                    </h2>
+
+                    <p>
+                        Hemos pensado el proceso para que
+                        puedas avanzar de forma clara.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PASOS DEL PROCESO
+                ================================================== -->
+
+                <div class="process-grid">
+
+
+                    <!-- PASO 01 -->
+
+                    <div class="process-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Solicita
+                        </h3>
+
+                        <p>
+                            Completa el formulario de solicitud
+                            con tus datos.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- PASO 02 -->
+
+                    <div class="process-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Evaluamos
+                        </h3>
+
+                        <p>
+                            Revisamos la información proporcionada
+                            durante el proceso.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- PASO 03 -->
+
+                    <div class="process-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Conoce tus opciones
+                        </h3>
+
+                        <p>
+                            Obtén información sobre las alternativas
+                            disponibles.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- PASO 04 -->
+
+                    <div class="process-card">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            Avanza
+                        </h3>
+
+                        <p>
+                            Continúa el proceso según las condiciones
+                            correspondientes.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             POR QUÉ FINOVA
+        ================================================== -->
+
+        <section class="about-home">
+
+            <div class="container about-home-content">
+
+
+                <!-- =================================================
+                     IMAGEN / LADO VISUAL
+                ================================================== -->
+
+                <div class="about-home-image">
+
+                    <img
+                        src="img/equipo-finova.jpg"
+                        alt="Personas conversando sobre financiación"
+                    >
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONTENIDO / INFORMACIÓN
+                ================================================== -->
+
+                <div class="about-home-text">
+
+
+                    <!-- ETIQUETA -->
+
+                    <span class="tag">
+                        ¿Por qué Finova?
+                    </span>
+
+
+                    <!-- TÍTULO -->
+
+                    <h2>
+                        Una experiencia clara desde el primer paso
+                    </h2>
+
+
+                    <!-- DESCRIPCIÓN -->
+
+                    <p>
+                        Queremos que encontrar información sobre
+                        financiación sea un proceso sencillo y
+                        comprensible.
+                    </p>
+
+
+
+                    <!-- =================================================
+                         BENEFICIOS DE FINOVA
+                    ================================================== -->
+
+                    <div class="benefits">
+
+
+                        <!-- BENEFICIO 01 -->
+
+                        <div class="benefit">
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Información clara
+                                </strong>
+
+                                <p>
+                                    Presentamos la información de
+                                    forma sencilla.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BENEFICIO 02 -->
+
+                        <div class="benefit">
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Proceso sencillo
+                                </strong>
+
+                                <p>
+                                    Puedes iniciar tu solicitud
+                                    de manera rápida.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BENEFICIO 03 -->
+
+                        <div class="benefit">
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Atención personalizada
+                                </strong>
+
+                                <p>
+                                    Estamos disponibles para
+                                    resolver tus inquietudes.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         BOTÓN "CONOCE MÁS"
+                    ================================================== -->
+
+                    <a
+                        href="nosotros.html"
+                        class="btn btn-secondary"
+                    >
+                        Conoce más sobre Finova
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA FINAL / LLAMADA A LA ACCIÓN
+        ================================================== -->
+
+        <section class="cta">
+
+            <div class="container cta-content">
+
+
+                <!-- ETIQUETA -->
+
+                <span class="tag">
+                    Comienza hoy
+                </span>
+
+
+                <!-- TÍTULO -->
+
+                <h2>
+                    ¿Tienes un proyecto en mente?
+                </h2>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <p>
+                    Da el primer paso y conoce las opciones
+                    de financiación disponibles para ti.
+                </p>
+
+
+                <!-- BOTÓN PRINCIPAL -->
+
+                <a
+                    href="solicitud.html"
+                    class="btn btn-light"
+                >
+                    Iniciar solicitud
+                </a>
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
 
         <div class="container footer-content">
+
+
+            <!-- LOGOTIPO DEL FOOTER -->
 
             <div class="logo footer-logo">
 
@@ -173,6 +777,9 @@
 
             </div>
 
+
+            <!-- COPYRIGHT -->
+
             <p>
                 © 2026 Finova. Todos los derechos reservados.
             </p>
@@ -182,7 +789,70 @@
     </footer>
 
 
+
+    <!-- =====================================================
+         BOTÓN FLOTANTE DE WHATSAPP
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/57XXXXXXXXXX?text=Hola%2C%20estoy%20interesado%20en%20conocer%20las%20opciones%20de%20financiaci%C3%B3n."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+    >
+
+
+        <!-- =================================================
+             ICONO DE WHATSAPP
+        ================================================== -->
+
+        <span class="whatsapp-icon">
+
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+
+                <path
+                    d="M20.52 3.48A11.87 11.87 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.65a11.88 11.88 0 0 0 5.75 1.47h.01c6.57 0 11.91-5.34 11.91-11.91a11.86 11.86 0 0 0-3.47-8.43ZM12.08 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.87 9.87 0 0 1-1.52-5.28C2.2 6.44 6.63 2 12.08 2a9.85 9.85 0 0 1 7 2.9 9.85 9.85 0 0 1 2.9 7c0 5.45-4.44 9.9-9.9 9.9Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.35.2 1.86.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"
+                />
+
+            </svg>
+
+        </span>
+
+
+
+        <!-- =================================================
+             TEXTO DEL BOTÓN WHATSAPP
+        ================================================== -->
+
+        <span class="whatsapp-text">
+
+            <strong>
+                WhatsApp
+            </strong>
+
+            <small>
+                Contacta sin compromiso
+            </small>
+
+        </span>
+
+    </a>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT PRINCIPAL
+
+         Este archivo controla las interacciones
+         y funcionalidades del sitio.
+    ====================================================== -->
+
     <script src="js/app.js"></script>
+
 
 </body>
 

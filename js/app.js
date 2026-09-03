@@ -1,132 +1,286 @@
 /* =========================================================
    FINOVA
    APP.JS
-========================================================= */
+
+   JavaScript compartido por:
+
+   - solicitud.html
+   - contacto.html
+   - Otros formularios de Finova
+
+   OBJETIVOS:
+   - Validar formularios
+   - Mostrar mensajes de error
+   - Mostrar mensajes de éxito
+   - Evitar recargas innecesarias
+   - Limpiar errores al modificar campos
+   - Preparar los datos para futura conexión
+     con un backend
+   ========================================================= */
 
 
 /* =========================================================
-   FORMULARIO DE SOLICITUD
-========================================================= */
+   01. FUNCIONES GENERALES DE MENSAJES
+   ========================================================= */
 
+
+/**
+ * Muestra un mensaje general dentro de un formulario.
+ *
+ * type:
+ * - "success" → envío correcto
+ * - "error"   → falta información o existe un error
+ */
+function showFormMessage(form, message, type) {
+
+    const formMessage =
+        form.querySelector(".form-message");
+
+    /*
+       Si el formulario no tiene un elemento
+       .form-message, no hacemos nada.
+    */
+    if (!formMessage) {
+        return;
+    }
+
+
+    /* Colocamos el texto del mensaje */
+    formMessage.textContent = message;
+
+
+    /*
+       Reiniciamos las clases anteriores
+       para evitar conflictos.
+    */
+    formMessage.className = "form-message";
+
+
+    /* Mensaje de éxito */
+    if (type === "success") {
+
+        formMessage.classList.add("success");
+
+    }
+
+
+    /* Mensaje de error */
+    if (type === "error") {
+
+        formMessage.classList.add("error");
+
+    }
+
+
+    /*
+       Desplazamos suavemente la pantalla
+       hasta el mensaje.
+    */
+    formMessage.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "center"
+
+    });
+
+}
+
+
+/**
+ * Oculta el mensaje general del formulario.
+ */
+function clearFormMessage(form) {
+
+    const formMessage =
+        form.querySelector(".form-message");
+
+
+    /*
+       Si el formulario no tiene mensaje,
+       no hacemos nada.
+    */
+    if (!formMessage) {
+        return;
+    }
+
+
+    /* Eliminamos el contenido */
+    formMessage.textContent = "";
+
+
+    /* Restauramos la clase original */
+    formMessage.className = "form-message";
+
+}
+
+
+/* =========================================================
+   02. FORMULARIO DE SOLICITUD
+   solicitud.html
+   ========================================================= */
+
+
+/*
+   Buscamos el formulario principal
+   de solicitud de financiación.
+*/
 const applicationForm =
     document.getElementById("applicationForm");
 
 
 /*
-    Solo ejecutamos el código si estamos
-    en la página que contiene el formulario.
+   Esta sección solamente se ejecuta
+   si estamos en solicitud.html.
 */
-
 if (applicationForm) {
 
 
     /* =====================================================
-       ELEMENTOS DEL FORMULARIO
-    ====================================================== */
+       02.1 ELEMENTOS DEL FORMULARIO
+       ===================================================== */
+
 
     const nameInput =
         document.getElementById("name");
 
+
     const documentInput =
         document.getElementById("document");
+
 
     const emailInput =
         document.getElementById("email");
 
+
     const phoneInput =
         document.getElementById("phone");
+
 
     const typeInput =
         document.getElementById("type");
 
+
     const amountInput =
         document.getElementById("amount");
+
 
     const termInput =
         document.getElementById("term");
 
+
     const destinationInput =
         document.getElementById("destination");
+
 
     const messageInput =
         document.getElementById("message");
 
-    const formMessage =
-        document.getElementById("formMessage");
-
 
     /* =====================================================
-       FUNCIONES
-    ====================================================== */
+       02.2 FUNCIONES DE ERROR POR CAMPO
+       ===================================================== */
 
 
-    /*
-        Mostrar error en un campo
-    */
-
+    /**
+     * Muestra un mensaje de error
+     * debajo de un campo específico.
+     */
     function showError(input, message) {
 
-        const group =
-            input.closest(".input-group");
-
-        if (!group) return;
+        /*
+           Si el campo no existe,
+           detenemos la función.
+        */
+        if (!input) {
+            return;
+        }
 
 
         /*
-            Eliminamos un error anterior
+           Buscamos el contenedor
+           .input-group correspondiente.
         */
+        const group =
+            input.closest(".input-group");
 
+
+        if (!group) {
+            return;
+        }
+
+
+        /*
+           Primero eliminamos cualquier
+           error anterior.
+        */
         removeError(input);
 
 
         /*
-            Creamos el mensaje
+           Creamos el elemento
+           donde aparecerá el error.
         */
-
         const error =
             document.createElement("span");
 
+
         error.className =
             "input-error";
+
 
         error.textContent =
             message;
 
 
         /*
-            Añadimos el mensaje
-            después del campo
+           Insertamos el mensaje
+           debajo del campo.
         */
-
         group.appendChild(error);
 
 
         /*
-            Marcamos visualmente el campo
+           Marcamos visualmente el campo
+           que contiene el error.
         */
-
-        input.classList.add("input-error-field");
+        input.classList.add(
+            "input-error-field"
+        );
 
     }
 
 
-
-    /*
-        Eliminar error
-    */
-
+    /**
+     * Elimina el error de un campo.
+     */
     function removeError(input) {
+
+        if (!input) {
+            return;
+        }
+
 
         const group =
             input.closest(".input-group");
 
-        if (!group) return;
+
+        if (!group) {
+            return;
+        }
 
 
+        /*
+           Buscamos el mensaje de error
+           existente dentro del grupo.
+        */
         const existingError =
             group.querySelector(".input-error");
 
 
+        /*
+           Si existe, lo eliminamos.
+        */
         if (existingError) {
 
             existingError.remove();
@@ -134,6 +288,10 @@ if (applicationForm) {
         }
 
 
+        /*
+           Quitamos la clase visual
+           de error del campo.
+        */
         input.classList.remove(
             "input-error-field"
         );
@@ -141,19 +299,21 @@ if (applicationForm) {
     }
 
 
-
-    /*
-        Limpiar todos los errores
-    */
-
+    /**
+     * Elimina todos los errores
+     * existentes en el formulario.
+     */
     function clearErrors() {
 
+
+        /* Buscamos todos los mensajes */
         const errors =
             applicationForm.querySelectorAll(
                 ".input-error"
             );
 
 
+        /* Los eliminamos */
         errors.forEach(error => {
 
             error.remove();
@@ -161,12 +321,17 @@ if (applicationForm) {
         });
 
 
+        /*
+           Buscamos todos los campos
+           marcados con error.
+        */
         const fields =
             applicationForm.querySelectorAll(
                 ".input-error-field"
             );
 
 
+        /* Quitamos la clase de error */
         fields.forEach(field => {
 
             field.classList.remove(
@@ -178,10 +343,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN DE NOMBRE
-    ====================================================== */
+       02.3 VALIDACIÓN DEL NOMBRE
+       ===================================================== */
+
 
     function validateName() {
 
@@ -189,6 +354,7 @@ if (applicationForm) {
             nameInput.value.trim();
 
 
+        /* Campo vacío */
         if (value === "") {
 
             showError(
@@ -201,6 +367,7 @@ if (applicationForm) {
         }
 
 
+        /* Nombre demasiado corto */
         if (value.length < 3) {
 
             showError(
@@ -218,10 +385,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN DOCUMENTO
-    ====================================================== */
+       02.4 VALIDACIÓN DEL DOCUMENTO
+       ===================================================== */
+
 
     function validateDocument() {
 
@@ -229,6 +396,7 @@ if (applicationForm) {
             documentInput.value.trim();
 
 
+        /* Campo vacío */
         if (value === "") {
 
             showError(
@@ -241,6 +409,7 @@ if (applicationForm) {
         }
 
 
+        /* Documento demasiado corto */
         if (value.length < 5) {
 
             showError(
@@ -258,10 +427,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN EMAIL
-    ====================================================== */
+       02.5 VALIDACIÓN DEL CORREO
+       ===================================================== */
+
 
     function validateEmail() {
 
@@ -269,6 +438,7 @@ if (applicationForm) {
             emailInput.value.trim();
 
 
+        /* Campo vacío */
         if (value === "") {
 
             showError(
@@ -281,10 +451,18 @@ if (applicationForm) {
         }
 
 
+        /*
+           Expresión básica para comprobar
+           que el correo tenga una estructura válida.
+        */
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
+        /*
+           Comprobamos el correo
+           utilizando la expresión anterior.
+        */
         if (!emailPattern.test(value)) {
 
             showError(
@@ -302,10 +480,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN TELÉFONO
-    ====================================================== */
+       02.6 VALIDACIÓN DEL TELÉFONO
+       ===================================================== */
+
 
     function validatePhone() {
 
@@ -313,6 +491,7 @@ if (applicationForm) {
             phoneInput.value.trim();
 
 
+        /* Campo vacío */
         if (value === "") {
 
             showError(
@@ -325,10 +504,18 @@ if (applicationForm) {
         }
 
 
+        /*
+           Eliminamos cualquier carácter
+           que no sea un número.
+        */
         const numbersOnly =
             value.replace(/\D/g, "");
 
 
+        /*
+           Comprobamos que existan
+           al menos 7 números.
+        */
         if (numbersOnly.length < 7) {
 
             showError(
@@ -346,10 +533,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN TIPO FINANCIACIÓN
-    ====================================================== */
+       02.7 VALIDACIÓN DEL TIPO DE FINANCIACIÓN
+       ===================================================== */
+
 
     function validateType() {
 
@@ -370,10 +557,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN MONTO
-    ====================================================== */
+       02.8 VALIDACIÓN DEL MONTO
+       ===================================================== */
+
 
     function validateAmount() {
 
@@ -381,6 +568,10 @@ if (applicationForm) {
             Number(amountInput.value);
 
 
+        /*
+           Comprobamos si el campo
+           está vacío.
+        */
         if (!amountInput.value) {
 
             showError(
@@ -393,6 +584,10 @@ if (applicationForm) {
         }
 
 
+        /*
+           El monto debe ser mayor
+           que cero.
+        */
         if (value <= 0) {
 
             showError(
@@ -410,10 +605,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN PLAZO
-    ====================================================== */
+       02.9 VALIDACIÓN DEL PLAZO
+       ===================================================== */
+
 
     function validateTerm() {
 
@@ -434,10 +629,10 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN DESTINO
-    ====================================================== */
+       02.10 VALIDACIÓN DEL DESTINO
+       ===================================================== */
+
 
     function validateDestination() {
 
@@ -458,18 +653,32 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       VALIDACIÓN GENERAL
-    ====================================================== */
+       02.11 VALIDACIÓN GENERAL
+       ===================================================== */
 
-    function validateForm() {
 
+    function validateApplicationForm() {
+
+
+        /*
+           Eliminamos errores anteriores
+           antes de comenzar una nueva validación.
+        */
         clearErrors();
 
 
+        /*
+           Inicialmente asumimos
+           que el formulario es válido.
+        */
         let valid = true;
 
+
+        /*
+           Validamos cada campo
+           individualmente.
+        */
 
         if (!validateName()) {
 
@@ -532,33 +741,36 @@ if (applicationForm) {
     }
 
 
-
     /* =====================================================
-       FORMATEAR MONTO
-    ====================================================== */
+       02.12 CONTROL DEL MONTO
+       ===================================================== */
 
-    amountInput.addEventListener(
-        "input",
-        function () {
 
-            /*
-                Eliminamos valores negativos
-            */
+    if (amountInput) {
 
-            if (Number(this.value) < 0) {
+        amountInput.addEventListener(
+            "input",
+            function () {
 
-                this.value = 0;
+                /*
+                   Evita valores negativos.
+                */
+                if (Number(this.value) < 0) {
+
+                    this.value = 0;
+
+                }
 
             }
+        );
 
-        }
-    );
-
+    }
 
 
     /* =====================================================
-       LIMPIAR ERROR AL ESCRIBIR
-    ====================================================== */
+       02.13 LIMPIAR ERROR AL MODIFICAR CAMPOS
+       ===================================================== */
+
 
     const fields =
         applicationForm.querySelectorAll(
@@ -569,21 +781,37 @@ if (applicationForm) {
     fields.forEach(field => {
 
 
+        /*
+           Cuando el usuario escribe,
+           eliminamos el error de ese campo.
+        */
         field.addEventListener(
             "input",
             function () {
 
                 removeError(this);
 
+                clearFormMessage(
+                    applicationForm
+                );
+
             }
         );
 
 
+        /*
+           Cuando el usuario cambia
+           un select u otro campo.
+        */
         field.addEventListener(
             "change",
             function () {
 
                 removeError(this);
+
+                clearFormMessage(
+                    applicationForm
+                );
 
             }
         );
@@ -591,10 +819,10 @@ if (applicationForm) {
     });
 
 
-
     /* =====================================================
-       ENVÍO DEL FORMULARIO
-    ====================================================== */
+       02.14 ENVÍO DEL FORMULARIO
+       ===================================================== */
+
 
     applicationForm.addEventListener(
         "submit",
@@ -602,51 +830,72 @@ if (applicationForm) {
 
 
             /*
-                Evitamos que el navegador
-                recargue la página
+               Evitamos que el navegador
+               recargue la página.
             */
-
             event.preventDefault();
 
 
             /*
-                Limpiamos mensajes
+               Limpiamos mensajes anteriores.
             */
-
-            if (formMessage) {
-
-                formMessage.textContent = "";
-
-                formMessage.className =
-                    "form-message";
-
-            }
+            clearFormMessage(
+                applicationForm
+            );
 
 
             /*
-                Validamos
+               Ejecutamos la validación
+               completa del formulario.
             */
-
             const isValid =
-                validateForm();
+                validateApplicationForm();
 
 
-            /*
-                Si hay errores,
-                detenemos el proceso
-            */
+            /* =================================================
+               FORMULARIO CON ERRORES
+               ================================================= */
+
 
             if (!isValid) {
 
+
+                /*
+                   Mostramos un mensaje general
+                   indicando que existen errores.
+                */
+                showFormMessage(
+                    applicationForm,
+                    "⚠️ Por favor, revisa los campos indicados antes de enviar la solicitud.",
+                    "error"
+                );
+
+
+                /*
+                   Buscamos el primer campo
+                   que contiene un error.
+                */
                 const firstError =
                     applicationForm.querySelector(
                         ".input-error-field"
                     );
 
 
+                /*
+                   Llevamos el cursor
+                   al primer campo incorrecto.
+                */
                 if (firstError) {
 
                     firstError.focus();
+
+                    firstError.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "center"
+
+                    });
 
                 }
 
@@ -656,11 +905,15 @@ if (applicationForm) {
             }
 
 
-
             /* =================================================
                DATOS DEL FORMULARIO
-            ================================================== */
+               ================================================= */
 
+
+            /*
+               Creamos un objeto con todos
+               los datos introducidos por el usuario.
+            */
             const formData = {
 
                 name:
@@ -688,67 +941,222 @@ if (applicationForm) {
                     destinationInput.value,
 
                 message:
-                    messageInput.value.trim()
+                    messageInput
+                        ? messageInput.value.trim()
+                        : ""
 
             };
 
 
             /*
-                Por ahora mostramos los datos
-                en la consola.
+               Por ahora los datos se muestran
+               en la consola del navegador.
 
-                Más adelante podremos enviar
-                este objeto al backend.
+               Más adelante podrán enviarse
+               a un backend o servicio externo.
             */
-
             console.log(
                 "Solicitud recibida:",
                 formData
             );
 
 
-
             /* =================================================
                MENSAJE DE ÉXITO
-            ================================================== */
+               ================================================= */
 
-            if (formMessage) {
 
-                formMessage.textContent =
-                    "✓ Tu solicitud ha sido registrada correctamente.";
-
-                formMessage.classList.add(
-                    "success-message"
-                );
-
-            }
-
+            showFormMessage(
+                applicationForm,
+                "✓ Tu solicitud ha sido enviada correctamente. Nos pondremos en contacto contigo pronto.",
+                "success"
+            );
 
 
             /*
-                Desplazamos suavemente
-                hacia el mensaje
+               Limpiamos los campos
+               después del envío.
             */
-
-            if (formMessage) {
-
-                formMessage.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-
-            }
-
-
-
-            /*
-                Limpiamos el formulario
-            */
-
             applicationForm.reset();
-
 
         }
     );
 
 }
+
+
+/* =========================================================
+   03. FORMULARIOS GENERALES DE FINOVA
+   ========================================================= */
+
+
+/*
+   Esta sección permite que otros formularios
+   de Finova tengan:
+
+   ✓ Validación de campos required
+   ✓ Mensaje de error
+   ✓ Mensaje de éxito
+   ✓ Sin recargar la página
+
+   IMPORTANTE:
+
+   #applicationForm queda excluido porque
+   tiene su propia validación personalizada.
+*/
+
+
+const generalForms =
+    document.querySelectorAll(
+        "form:not(#applicationForm)"
+    );
+
+
+/*
+   Recorremos todos los formularios
+   generales encontrados.
+*/
+generalForms.forEach(form => {
+
+
+    /* =====================================================
+       03.1 ENVÍO DEL FORMULARIO
+       ===================================================== */
+
+
+    form.addEventListener(
+        "submit",
+        function (event) {
+
+
+            /*
+               Evitamos la recarga
+               de la página.
+            */
+            event.preventDefault();
+
+
+            /*
+               Limpiamos cualquier mensaje
+               mostrado anteriormente.
+            */
+            clearFormMessage(form);
+
+
+            /*
+               Utilizamos la validación
+               nativa de HTML.
+            */
+            if (!form.checkValidity()) {
+
+
+                /*
+                   Mostramos un mensaje general
+                   indicando que faltan campos.
+                */
+                showFormMessage(
+                    form,
+                    "⚠️ Por favor, completa todos los campos obligatorios antes de enviar.",
+                    "error"
+                );
+
+
+                /*
+                   El navegador muestra
+                   sus propios mensajes
+                   de validación.
+                */
+                form.reportValidity();
+
+
+                return;
+
+            }
+
+
+            /*
+               Si todo está correcto,
+               mostramos el mensaje de éxito.
+            */
+            showFormMessage(
+                form,
+                "✓ Formulario enviado correctamente.",
+                "success"
+            );
+
+
+            /*
+               Obtenemos los datos
+               enviados por el formulario.
+            */
+            const formData =
+                new FormData(form);
+
+
+            /*
+               Mostramos temporalmente
+               los datos en la consola.
+
+               Posteriormente podrán enviarse
+               a un backend.
+            */
+            console.log(
+                "Formulario recibido:",
+                Object.fromEntries(formData)
+            );
+
+
+            /*
+               Limpiamos los campos
+               después del envío.
+            */
+            form.reset();
+
+        }
+    );
+
+
+    /* =====================================================
+       03.2 LIMPIAR MENSAJE AL MODIFICAR CAMPOS
+       ===================================================== */
+
+
+    const fields =
+        form.querySelectorAll(
+            "input, select, textarea"
+        );
+
+
+    fields.forEach(field => {
+
+
+        /*
+           Al escribir en un campo,
+           eliminamos el mensaje general.
+        */
+        field.addEventListener(
+            "input",
+            function () {
+
+                clearFormMessage(form);
+
+            }
+        );
+
+
+        /*
+           Al cambiar un select
+           u otro campo.
+        */
+        field.addEventListener(
+            "change",
+            function () {
+
+                clearFormMessage(form);
+
+            }
+        );
+
+    });
+
+});

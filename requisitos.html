@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
+
+    <!-- =====================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+    ====================================================== -->
 
     <meta charset="UTF-8">
 
@@ -12,6 +17,11 @@
 
     <title>Finova | Requisitos</title>
 
+
+    <!-- =====================================================
+         HOJA DE ESTILOS PRINCIPAL
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="css/style.css"
@@ -20,40 +30,90 @@
 </head>
 
 
+
 <body>
+
+
+    <!-- =====================================================
+         HEADER / NAVEGACIÓN PRINCIPAL
+    ====================================================== -->
 
     <header class="header">
 
         <div class="container nav">
 
-            <a href="index.html" class="logo">
-                <span class="logo-icon">F</span>
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    F
+                </span>
+
                 Finova
+
             </a>
 
+
+
+            <!-- =================================================
+                 MENÚ PRINCIPAL
+            ================================================== -->
+
             <nav class="menu">
+
+
+                <!-- Inicio -->
 
                 <a href="index.html">
                     Inicio
                 </a>
 
+
+                <!-- Nosotros -->
+
                 <a href="nosotros.html">
                     Nosotros
                 </a>
+
+
+                <!-- Solicitud -->
 
                 <a href="solicitud.html">
                     Solicitud
                 </a>
 
-                <a href="requisitos.html" class="active">
+
+                <!-- Requisitos - Página actual -->
+
+                <a
+                    href="requisitos.html"
+                    class="active"
+                >
                     Requisitos
                 </a>
+
+
+                <!-- Contacto -->
 
                 <a href="contacto.html">
                     Contacto
                 </a>
 
+
             </nav>
+
+
+
+            <!-- =================================================
+                 BOTÓN PRINCIPAL DEL HEADER
+            ================================================== -->
 
             <a
                 href="solicitud.html"
@@ -62,110 +122,748 @@
                 Solicitar financiación
             </a>
 
+
         </div>
 
     </header>
 
 
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
     <main>
 
-        <section class="page-hero">
 
-            <div class="container">
+        <!-- =================================================
+             HERO - REQUISITOS
+        ================================================== -->
 
-                <span class="tag">
-                    Requisitos
-                </span>
+        <section class="requirements-hero">
 
-                <h1>
-                    ¿Qué necesitas para solicitar?
-                </h1>
+            <div class="container requirements-hero-grid">
 
-                <p>
-                    Conoce la información que podemos solicitar
-                    durante el proceso.
-                </p>
+
+                <!-- =================================================
+                     CONTENIDO DEL HERO
+                ================================================== -->
+
+                <div class="requirements-hero-content">
+
+
+                    <!-- Etiqueta -->
+
+                    <span class="tag">
+                        Requisitos
+                    </span>
+
+
+                    <!-- Título principal -->
+
+                    <h1>
+
+                        Todo lo que necesitas
+                        para comenzar.
+
+                    </h1>
+
+
+                    <!-- Descripción -->
+
+                    <p>
+
+                        Prepara la información necesaria para
+                        realizar tu solicitud de financiación
+                        de manera sencilla y organizada.
+
+                    </p>
+
+
+                    <!-- Botón principal -->
+
+                    <a
+                        href="solicitud.html"
+                        class="btn btn-primary"
+                    >
+                        Iniciar solicitud
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     IMAGEN DEL HERO
+                ================================================== -->
+
+                <div class="requirements-hero-image">
+
+
+                    <!-- Imagen principal -->
+
+                    <img
+                        src="img/requisitos.jpeg"
+                        alt="Persona preparando documentación financiera"
+                    >
+
+
+                    <!-- =================================================
+                         TARJETA FLOTANTE
+                    ================================================== -->
+
+                    <div class="requirements-floating-card">
+
+
+                        <!-- Icono de verificación -->
+
+                        <div class="requirements-check">
+                            ✓
+                        </div>
+
+
+                        <!-- Contenido de la tarjeta -->
+
+                        <div>
+
+                            <strong>
+                                Proceso sencillo
+                            </strong>
+
+                            <span>
+                                Prepara tus documentos
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
 
             </div>
 
         </section>
 
 
-        <section>
+
+        <!-- =================================================
+             SECCIÓN: REQUISITOS
+        ================================================== -->
+
+        <section class="requirements-section">
 
             <div class="container">
 
+
+                <!-- =================================================
+                     ENCABEZADO DE LA SECCIÓN
+                ================================================== -->
+
+                <div class="section-heading requirements-heading">
+
+
+                    <!-- Etiqueta -->
+
+                    <span class="section-label">
+                        Documentación
+                    </span>
+
+
+                    <!-- Título -->
+
+                    <h2>
+                        ¿Qué necesitas?
+                    </h2>
+
+
+                    <!-- Descripción -->
+
+                    <p>
+
+                        Estos son algunos de los datos y documentos
+                        que pueden solicitarse durante el proceso.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TARJETAS DE REQUISITOS
+                ================================================== -->
+
                 <div class="requirements-grid">
 
-                    <article class="requirement">
 
-                        <span class="requirement-number">
-                            01
-                        </span>
+                    <!-- =================================================
+                         REQUISITO 01
+                    ================================================== -->
+
+                    <article class="requirement-card">
+
+                        <div class="requirement-top">
+
+                            <span class="requirement-number">
+                                01
+                            </span>
+
+                            <span class="requirement-icon">
+                                ID
+                            </span>
+
+                        </div>
+
 
                         <h3>
                             Documento de identidad
                         </h3>
 
+
                         <p>
-                            Documento de identidad vigente.
+
+                            Documento de identidad vigente y
+                            en buen estado.
+
                         </p>
+
 
                     </article>
 
 
-                    <article class="requirement">
 
-                        <span class="requirement-number">
-                            02
-                        </span>
+                    <!-- =================================================
+                         REQUISITO 02
+                    ================================================== -->
+
+                    <article class="requirement-card">
+
+                        <div class="requirement-top">
+
+                            <span class="requirement-number">
+                                02
+                            </span>
+
+                            <span class="requirement-icon">
+                                👤
+                            </span>
+
+                        </div>
+
 
                         <h3>
                             Datos personales
                         </h3>
 
+
                         <p>
-                            Información básica de contacto
-                            y residencia.
+
+                            Información básica de contacto,
+                            residencia y datos personales.
+
                         </p>
+
 
                     </article>
 
 
-                    <article class="requirement">
 
-                        <span class="requirement-number">
-                            03
-                        </span>
+                    <!-- =================================================
+                         REQUISITO 03
+                    ================================================== -->
+
+                    <article class="requirement-card">
+
+                        <div class="requirement-top">
+
+                            <span class="requirement-number">
+                                03
+                            </span>
+
+                            <span class="requirement-icon">
+                                $
+                            </span>
+
+                        </div>
+
 
                         <h3>
                             Información financiera
                         </h3>
 
+
                         <p>
-                            Información necesaria para
-                            realizar la evaluación.
+
+                            Información necesaria para realizar
+                            la evaluación de la solicitud.
+
                         </p>
+
 
                     </article>
 
 
-                    <article class="requirement">
 
-                        <span class="requirement-number">
-                            04
-                        </span>
+                    <!-- =================================================
+                         REQUISITO 04
+                    ================================================== -->
+
+                    <article class="requirement-card">
+
+                        <div class="requirement-top">
+
+                            <span class="requirement-number">
+                                04
+                            </span>
+
+                            <span class="requirement-icon">
+                                +
+                            </span>
+
+                        </div>
+
 
                         <h3>
                             Documentación adicional
                         </h3>
 
+
                         <p>
-                            Dependiendo del tipo de financiación
-                            pueden solicitarse documentos adicionales.
+
+                            Según el tipo de financiación pueden
+                            solicitarse documentos adicionales.
+
                         </p>
 
+
                     </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECCIÓN: PROCESO
+        ================================================== -->
+
+        <section class="requirements-process">
+
+            <div class="container">
+
+
+                <!-- =================================================
+                     ENCABEZADO DEL PROCESO
+                ================================================== -->
+
+                <div class="section-heading">
+
+
+                    <!-- Etiqueta -->
+
+                    <span class="tag">
+                        ¿Cómo funciona?
+                    </span>
+
+
+                    <!-- Título -->
+
+                    <h2>
+                        Un proceso pensado para ser sencillo.
+                    </h2>
+
+
+                    <!-- Descripción -->
+
+                    <p>
+
+                        Completa estos pasos para avanzar
+                        con tu solicitud.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PASOS DEL PROCESO
+                ================================================== -->
+
+                <div class="process-grid">
+
+
+                    <!-- =================================================
+                         PASO 01
+                    ================================================== -->
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+
+                        <div class="process-line"></div>
+
+
+                        <h3>
+                            Completa tu solicitud
+                        </h3>
+
+
+                        <p>
+
+                            Ingresa tus datos y la información
+                            necesaria para comenzar.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PASO 02
+                    ================================================== -->
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+
+                        <div class="process-line"></div>
+
+
+                        <h3>
+                            Prepara la información
+                        </h3>
+
+
+                        <p>
+
+                            Ten disponibles los documentos
+                            que puedan ser requeridos.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PASO 03
+                    ================================================== -->
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+
+                        <div class="process-line"></div>
+
+
+                        <h3>
+                            Evaluamos tu solicitud
+                        </h3>
+
+
+                        <p>
+
+                            Revisamos la información proporcionada
+                            durante el proceso.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PASO 04
+                    ================================================== -->
+
+                    <article class="process-card">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+
+                        <div class="process-line"></div>
+
+
+                        <h3>
+                            Conoce el resultado
+                        </h3>
+
+
+                        <p>
+
+                            Recibe información sobre el resultado
+                            de tu solicitud.
+
+                        </p>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECCIÓN: ANTES DE COMENZAR
+        ================================================== -->
+
+        <section class="before-section">
+
+            <div class="container before-grid">
+
+
+                <!-- =================================================
+                     IMAGEN
+                ================================================== -->
+
+                <div class="before-image">
+
+                    <img
+                        src="img/preparar-documentos.jpeg"
+                        alt="Persona organizando documentos"
+                    >
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONTENIDO
+                ================================================== -->
+
+                <div class="before-content">
+
+
+                    <!-- Etiqueta -->
+
+                    <span class="section-label">
+                        Antes de comenzar
+                    </span>
+
+
+                    <!-- Título -->
+
+                    <h2>
+
+                        Prepárate para una
+                        experiencia más rápida.
+
+                    </h2>
+
+
+                    <!-- Descripción -->
+
+                    <p>
+
+                        Tener tu información organizada puede
+                        ayudarte a completar el proceso de forma
+                        más sencilla.
+
+                    </p>
+
+
+
+                    <!-- =================================================
+                         LISTA DE RECOMENDACIONES
+                    ================================================== -->
+
+                    <div class="before-list">
+
+
+                        <!-- =================================================
+                             RECOMENDACIÓN 01
+                        ================================================== -->
+
+                        <div class="before-item">
+
+                            <span>
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Verifica tus documentos
+                                </strong>
+
+                                <p>
+
+                                    Asegúrate de que la información
+                                    esté actualizada.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             RECOMENDACIÓN 02
+                        ================================================== -->
+
+                        <div class="before-item">
+
+                            <span>
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Ten tus datos a la mano
+                                </strong>
+
+                                <p>
+
+                                    Esto te permitirá completar
+                                    la solicitud con mayor facilidad.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             RECOMENDACIÓN 03
+                        ================================================== -->
+
+                        <div class="before-item">
+
+                            <span>
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Revisa la información
+                                </strong>
+
+                                <p>
+
+                                    Comprueba que los datos
+                                    proporcionados sean correctos.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA / LLAMADA A LA ACCIÓN
+        ================================================== -->
+
+        <section class="requirements-cta">
+
+            <div class="container">
+
+                <div class="requirements-cta-box">
+
+
+                    <!-- =================================================
+                         TEXTO DEL CTA
+                    ================================================== -->
+
+                    <div>
+
+
+                        <!-- Etiqueta -->
+
+                        <span class="tag">
+                            ¿Todo listo?
+                        </span>
+
+
+                        <!-- Título -->
+
+                        <h2>
+                            Comienza tu solicitud.
+                        </h2>
+
+
+                        <!-- Descripción -->
+
+                        <p>
+
+                            Da el siguiente paso y conoce
+                            tus opciones de financiación.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         BOTÓN DEL CTA
+                    ================================================== -->
+
+                    <a
+                        href="solicitud.html"
+                        class="btn btn-primary"
+                    >
+                        Solicitar financiación
+                    </a>
+
 
                 </div>
 
@@ -173,25 +871,48 @@
 
         </section>
 
+
     </main>
 
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <div class="container footer-content">
 
+
+            <!-- =================================================
+                 LOGO DEL FOOTER
+            ================================================== -->
+
             <div class="logo footer-logo">
-                <span class="logo-icon">F</span>
+
+                <span class="logo-icon">
+                    F
+                </span>
+
                 Finova
+
             </div>
 
+
+            <!-- =================================================
+                 COPYRIGHT
+            ================================================== -->
+
             <p>
-                © 2026 Finova.
+                © 2026 Finova. Todos los derechos reservados.
             </p>
+
 
         </div>
 
     </footer>
+
 
 </body>
 

@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- =====================================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,6 +15,11 @@
     >
 
     <title>Finova | Contacto</title>
+
+
+    <!-- =====================================================
+         HOJA DE ESTILOS PRINCIPAL
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -22,14 +31,30 @@
 
 <body>
 
+
+    <!-- =====================================================
+         HEADER / NAVEGACIÓN PRINCIPAL
+    ====================================================== -->
+
     <header class="header">
 
         <div class="container nav">
 
+
+            <!-- LOGOTIPO -->
+
             <a href="index.html" class="logo">
-                <span class="logo-icon">F</span>
+
+                <span class="logo-icon">
+                    F
+                </span>
+
                 Finova
+
             </a>
+
+
+            <!-- MENÚ DE NAVEGACIÓN -->
 
             <nav class="menu">
 
@@ -49,11 +74,19 @@
                     Requisitos
                 </a>
 
-                <a href="contacto.html" class="active">
+                <!-- Página actual -->
+
+                <a
+                    href="contacto.html"
+                    class="active"
+                >
                     Contacto
                 </a>
 
             </nav>
+
+
+            <!-- BOTÓN PRINCIPAL DEL HEADER -->
 
             <a
                 href="solicitud.html"
@@ -67,104 +100,740 @@
     </header>
 
 
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
     <main>
 
-        <section class="page-hero">
 
-            <div class="container">
+        <!-- =================================================
+             HERO / PRESENTACIÓN DE CONTACTO
+        ================================================== -->
 
-                <span class="tag">
-                    Contacto
-                </span>
+        <section class="contact-hero">
 
-                <h1>
-                    Estamos aquí para ayudarte
-                </h1>
-
-                <p>
-                    Ponte en contacto con nuestro equipo.
-                </p>
-
-            </div>
-
-        </section>
+            <div class="container contact-hero-grid">
 
 
-        <section>
+                <!-- TEXTO DEL HERO -->
 
-            <div class="container contact-layout">
+                <div class="contact-hero-content">
 
-                <div class="contact-info">
+                    <span class="tag">
+                        Contacto
+                    </span>
 
-                    <h2>
-                        Hablemos
-                    </h2>
+                    <h1>
+                        Estamos aquí para
+                        <span>ayudarte.</span>
+                    </h1>
 
                     <p>
-                        Si tienes preguntas sobre nuestros
-                        productos o el proceso de solicitud,
-                        puedes comunicarte con nosotros.
+                        ¿Tienes alguna pregunta? Nuestro equipo
+                        está disponible para orientarte y ayudarte
+                        durante el proceso.
                     </p>
 
-                    <div class="contact-item">
 
-                        <strong>
-                            Correo electrónico
-                        </strong>
+                    <!-- BOTONES DEL HERO -->
 
-                        <span>
-                            contacto@finova.com
-                        </span>
+                    <div class="contact-hero-buttons">
 
-                    </div>
+                        <a
+                            href="#contact-info"
+                            class="btn btn-primary"
+                        >
+                            Contactarnos
+                        </a>
 
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Teléfono
-                        </strong>
-
-                        <span>
-                            +57 000 000 0000
-                        </span>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Horario de atención
-                        </strong>
-
-                        <span>
-                            Lunes a viernes
-                            <br>
-                            8:00 a.m. — 5:00 p.m.
-                        </span>
+                        <a
+                            href="solicitud.html"
+                            class="btn btn-secondary"
+                        >
+                            Solicitar financiación
+                        </a>
 
                     </div>
 
                 </div>
 
 
-                <div class="contact-card">
 
-                    <h3>
-                        ¿Quieres solicitar financiación?
-                    </h3>
+                <!-- IMAGEN DEL HERO -->
+
+                <div class="contact-hero-image">
+
+                    <img
+                        src="img/contacto.jpeg"
+                        alt="Equipo de atención al cliente de Finova"
+                    >
+
+
+                    <!-- TARJETA SUPERPUESTA SOBRE LA IMAGEN -->
+
+                    <div class="contact-hero-card">
+
+                        <div class="contact-hero-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Estamos para ayudarte
+                            </strong>
+
+                            <span>
+                                Atención clara y cercana
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMACIÓN DE CONTACTO
+        ================================================== -->
+
+        <section
+            class="contact-info-section"
+            id="contact-info"
+        >
+
+            <div class="container">
+
+
+                <!-- ENCABEZADO DE LA SECCIÓN -->
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Información de contacto
+                    </span>
+
+                    <h2>
+                        Hablemos
+                    </h2>
 
                     <p>
-                        Puedes comenzar directamente desde
-                        nuestro formulario de solicitud.
+                        Elige el medio que prefieras para
+                        comunicarte con nosotros.
                     </p>
+
+                </div>
+
+
+                <!-- TARJETAS DE CONTACTO -->
+
+                <div class="contact-cards">
+
+
+                    <!-- =================================================
+                         TARJETA DE CORREO ELECTRÓNICO
+                    ================================================== -->
+
+                    <article class="contact-info-card">
+
+                        <div class="contact-card-icon">
+                            @
+                        </div>
+
+                        <span class="contact-card-label">
+                            Correo electrónico
+                        </span>
+
+                        <h3>
+                            contacto@finova.com
+                        </h3>
+
+                        <p>
+                            Escríbenos para resolver tus dudas
+                            o solicitar información.
+                        </p>
+
+                        <a href="mailto:contacto@finova.com">
+                            Enviar correo →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TARJETA DE TELÉFONO
+                    ================================================== -->
+
+                    <article class="contact-info-card">
+
+                        <div class="contact-card-icon">
+                            ☎
+                        </div>
+
+                        <span class="contact-card-label">
+                            Teléfono
+                        </span>
+
+                        <h3>
+                            +57 000 000 0000
+                        </h3>
+
+                        <p>
+                            Comunícate con nuestro equipo
+                            durante el horario de atención.
+                        </p>
+
+                        <a href="tel:+570000000000">
+                            Llamar ahora →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         TARJETA DE HORARIO
+                    ================================================== -->
+
+                    <article class="contact-info-card">
+
+                        <div class="contact-card-icon">
+                            ◷
+                        </div>
+
+                        <span class="contact-card-label">
+                            Horario de atención
+                        </span>
+
+                        <h3>
+                            Lunes a viernes
+                        </h3>
+
+                        <p>
+                            Nuestro horario de atención es
+                            de 8:00 a.m. a 5:00 p.m.
+                        </p>
+
+                        <span class="contact-schedule">
+                            8:00 a.m. — 5:00 p.m.
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SECCIÓN FORMULARIO DE CONTACTO
+        ================================================== -->
+
+        <section class="contact-form-section">
+
+            <div class="container contact-form-layout">
+
+
+                <!-- =================================================
+                     INFORMACIÓN LATERAL DEL FORMULARIO
+                ================================================== -->
+
+                <div class="contact-form-info">
+
+                    <span class="section-label">
+                        Escríbenos
+                    </span>
+
+                    <h2>
+                        ¿Tienes alguna pregunta?
+                    </h2>
+
+                    <p>
+                        Completa el formulario y déjanos tu
+                        mensaje. Nuestro equipo podrá ponerse
+                        en contacto contigo.
+                    </p>
+
+
+                    <!-- BENEFICIOS DEL CONTACTO -->
+
+                    <div class="contact-form-benefits">
+
+
+                        <!-- BENEFICIO 1 -->
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Atención personalizada
+                            </p>
+
+                        </div>
+
+
+                        <!-- BENEFICIO 2 -->
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Información clara
+                            </p>
+
+                        </div>
+
+
+                        <!-- BENEFICIO 3 -->
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Respuesta a tus consultas
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         BOTÓN / CONTACTO WHATSAPP
+                    ================================================== -->
+
+                    <a
+                        href="https://wa.me/570000000000"
+                        class="whatsapp-contact"
+                        target="_blank"
+                    >
+
+                        <!-- ICONO WHATSAPP -->
+
+                        <div
+                            class="whatsapp-icon"
+                            aria-hidden="true"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                role="img"
+                            >
+
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.89-9.884 2.64 0 5.122 1.03 6.986 2.895a9.825 9.825 0 012.893 6.994c-.002 5.45-4.437 9.887-9.886 9.887m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.89c0 2.096.547 4.142 1.588 5.946L.057 24l6.304-1.654a11.933 11.933 0 005.683 1.448h.005c6.555 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.478-8.413"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <!-- TEXTO DE WHATSAPP -->
+
+                        <div>
+
+                            <strong>
+                                Escríbenos por WhatsApp
+                            </strong>
+
+                            <span>
+                                Contacta con nosotros
+                                directamente
+                            </span>
+
+                        </div>
+
+
+                        <!-- FLECHA -->
+
+                        <b>
+                            →
+                        </b>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TARJETA DEL FORMULARIO
+                ================================================== -->
+
+                <div class="contact-form-card">
+
+
+                    <!-- =================================================
+                         FORMULARIO DE CONTACTO
+
+                         ID utilizado por app.js
+                    ================================================== -->
+
+                    <form
+                        id="contactForm"
+                        action="#"
+                        method="post"
+                    >
+
+
+                        <!-- =================================================
+                             NOMBRE + CORREO ELECTRÓNICO
+                        ================================================== -->
+
+                        <div class="form-row">
+
+
+                            <!-- NOMBRE -->
+
+                            <div class="form-group">
+
+                                <label for="nombre">
+                                    Nombre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Tu nombre"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- CORREO -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="tu@email.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             TELÉFONO
+                        ================================================== -->
+
+                        <div class="form-group">
+
+                            <label for="telefono">
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="+57 000 000 0000"
+                            >
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             MOTIVO DE CONTACTO
+                        ================================================== -->
+
+                        <div class="form-group">
+
+                            <label for="asunto">
+                                Motivo de contacto
+                            </label>
+
+                            <select
+                                id="asunto"
+                                name="asunto"
+                            >
+
+                                <option value="">
+                                    Selecciona una opción
+                                </option>
+
+                                <option value="financiacion">
+                                    Información sobre financiación
+                                </option>
+
+                                <option value="solicitud">
+                                    Consulta sobre una solicitud
+                                </option>
+
+                                <option value="general">
+                                    Consulta general
+                                </option>
+
+                                <option value="otro">
+                                    Otro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             MENSAJE DEL USUARIO
+                        ================================================== -->
+
+                        <div class="form-group">
+
+                            <label for="mensaje">
+                                Mensaje
+                            </label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="5"
+                                placeholder="Cuéntanos cómo podemos ayudarte..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             BOTÓN ENVIAR
+                        ================================================== -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-full"
+                        >
+                            Enviar mensaje
+                        </button>
+
+
+
+                        <!-- =================================================
+                             AVISO DE PRIVACIDAD / DATOS
+                        ================================================== -->
+
+                        <small class="form-note">
+
+                            Al enviar este formulario aceptas
+                            que podamos utilizar tus datos para
+                            responder a tu consulta.
+
+                        </small>
+
+
+
+                        <!-- =================================================
+                             MENSAJE DE ESTADO DEL FORMULARIO
+
+                             app.js utiliza este elemento para mostrar:
+
+                             ✓ Mensaje de éxito
+
+                             ⚠️ Mensaje de error
+                        ================================================== -->
+
+                        <div
+                            class="form-message"
+                            role="alert"
+                            aria-live="polite"
+                        ></div>
+
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PREGUNTAS FRECUENTES / FAQ
+        ================================================== -->
+
+        <section class="contact-faq">
+
+            <div class="container">
+
+
+                <!-- ENCABEZADO FAQ -->
+
+                <div class="section-heading">
+
+                    <span class="tag">
+                        Preguntas frecuentes
+                    </span>
+
+                    <h2>
+                        Algunas respuestas rápidas.
+                    </h2>
+
+                </div>
+
+
+                <!-- LISTADO DE PREGUNTAS -->
+
+                <div class="faq-grid">
+
+
+                    <!-- PREGUNTA 1 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+                            ¿Cómo puedo solicitar financiación?
+                        </summary>
+
+                        <p>
+                            Puedes comenzar desde la sección
+                            Solicitud y completar el formulario
+                            con la información requerida.
+                        </p>
+
+                    </details>
+
+
+
+                    <!-- PREGUNTA 2 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+                            ¿Qué documentos necesito?
+                        </summary>
+
+                        <p>
+                            Consulta nuestra sección de Requisitos
+                            para conocer la información que puede
+                            solicitarse durante el proceso.
+                        </p>
+
+                    </details>
+
+
+
+                    <!-- PREGUNTA 3 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+                            ¿Puedo comunicarme si tengo dudas?
+                        </summary>
+
+                        <p>
+                            Sí. Puedes utilizar cualquiera de
+                            nuestros canales de contacto para
+                            realizar tus consultas.
+                        </p>
+
+                    </details>
+
+
+
+                    <!-- PREGUNTA 4 -->
+
+                    <details class="faq-item">
+
+                        <summary>
+                            ¿Dónde puedo iniciar mi solicitud?
+                        </summary>
+
+                        <p>
+                            Puedes iniciar el proceso directamente
+                            desde el botón de Solicitar financiación.
+                        </p>
+
+                    </details>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA FINAL
+        ================================================== -->
+
+        <section class="contact-cta">
+
+            <div class="container">
+
+                <div class="contact-cta-box">
+
+
+                    <!-- TEXTO DEL CTA -->
+
+                    <div>
+
+                        <span class="tag">
+                            Finova
+                        </span>
+
+                        <h2>
+                            ¿Listo para dar el siguiente paso?
+                        </h2>
+
+                        <p>
+                            Conoce nuestras opciones y comienza
+                            tu solicitud de financiación.
+                        </p>
+
+                    </div>
+
+
+                    <!-- BOTÓN CTA -->
 
                     <a
                         href="solicitud.html"
-                        class="btn btn-primary btn-full"
+                        class="btn btn-primary"
                     >
-                        Ir a solicitud
+                        Solicitar financiación
                     </a>
 
                 </div>
@@ -173,25 +842,58 @@
 
         </section>
 
+
     </main>
 
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <div class="container footer-content">
 
+
+            <!-- LOGOTIPO DEL FOOTER -->
+
             <div class="logo footer-logo">
-                <span class="logo-icon">F</span>
+
+                <span class="logo-icon">
+                    F
+                </span>
+
                 Finova
+
             </div>
 
+
+            <!-- COPYRIGHT -->
+
             <p>
-                © 2026 Finova.
+                © 2026 Finova. Todos los derechos reservados.
             </p>
 
         </div>
 
     </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT PRINCIPAL
+
+         Este archivo controla:
+
+         - Validación de formularios
+         - Mensajes de éxito
+         - Mensajes de error
+         - Interacciones del sitio
+    ====================================================== -->
+
+    <script src="js/app.js"></script>
+
 
 </body>
 
